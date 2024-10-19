@@ -1,0 +1,22 @@
+# Clase base Musico
+class Musico:
+    def instrumento(self):
+        raise NotImplementedError("Este método debe ser sobrescrito por una subclase")
+
+# Subclase Guitarrista que sobrescribe el método instrumento
+class Guitarrista(Musico):
+    def instrumento(self):
+        return "Toco la guitarra"
+
+# Subclase Baterista que sobrescribe el método instrumento
+class Baterista(Musico):
+    def instrumento(self):
+        return "Toco la batería"
+
+# Creamos una  instancias de las subclases
+guitarrista = Guitarrista()
+baterista = Baterista()
+
+# Demostramos el  polimorfismo
+for musico in (guitarrista, baterista):
+    print(musico.instrumento())
